@@ -11,4 +11,4 @@ function openNav()
 function closeNav()
 {
     document.getElementById("side-settings").style.width = "0";
-} 
+}

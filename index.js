@@ -9,7 +9,7 @@ var quotes = [
     "Le nom complet Sopra Steria est mentionné",
     "Carole est absente de la réunion",
     "Le ton monte entre deux personnes",
-    "12",
+    "La démat est en panne",
     "13",
     "14",
     "15",
@@ -22,11 +22,22 @@ var quotes = [
     "22",
     "23",
     "24",
-    "25"
+    "25",
+    "26"
 ]
 
-const bingoSize = 5;
+var bingoSize = 5;
 grid_state = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+
+
+function changedBingo(element)
+{
+    let val = parseInt(element.value);
+    if (val > 5)
+        return;
+    bingoSize = val;
+    generateBingo();
+}
 
 
 function shuffle(array) {
@@ -45,6 +56,7 @@ function generateBingo()
 {
     shuffle(quotes);
     let grid = document.getElementById("bingo-grid");
+    resetGrid();
     let row = "";
     let table = "";
     for (let i = 0; i < bingoSize; i++)
@@ -61,6 +73,13 @@ function generateBingo()
         table += "\n</tr>";
     }
     grid.innerHTML = table;
+}
+
+function resetGrid()
+{
+    for (let i = 0; i < grid_state.length; i++)
+        grid_state[i] = false;
+    document.getElementById("cases").innerHTML = "cases cochées: 0/" + parseInt(bingoSize * bingoSize);
 }
 
 function countTicked(state)
