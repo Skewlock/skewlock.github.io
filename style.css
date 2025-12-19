@@ -1,111 +1,206 @@
-h1 {
-    font-size: 3em;
-    text-align: center;
+:root
+{
+    --black-color: #000000;
+    --red-main-color: #ff003c9f;
+    --red-dark-color: #270d15;
+    --red-darker-color: #1a080e;
+    --red-light-color: #ff154bd7;
 }
 
-table, td {
-    border: 5px solid black;
+@font-face
+{
+    font-family: 'BlenderProBook';
+    src: url('assets/fonts/blender-pro-book.woff');
 }
 
-table {
-    background: rgb(131,58,180);
-    background: linear-gradient(135deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+@font-face {
+    font-family: 'Oxanium';
+    src: url('assets/fonts/Oxanium-VariableFont_wght.ttf');
 }
 
-header {
-    display: flex;
-    justify-content: space-around;
-}
-
-header div {
-    text-align: center;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-header h3 {
-    margin: 0;
-    font-size: 1.5em;
-    text-align: center;
-    flex-grow: 8;
-}
-
-.settings {
+html
+{
+    background-color: #000000;
+    font-size: 42px;
+    color: var(--red-light-color);
+    font-family: 'BlenderProBook';
+    width: 100%;
     height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #5a5a5a;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
 }
 
-.settings * {
-    display: block;
+body
+{
+    background: linear-gradient(0deg,rgba(10, 5, 7, 1) 0%, rgb(29, 8, 14) 31%, rgba(79, 9, 21, 1) 100%);
+    background-attachment: scroll;
+    background-attachment: fixed;
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+}
+
+button {
+    font-family: 'BlenderProBook';
+    font-size: 35px;
+    color: var(--red-light-color);
+    background-color: var(--red-dark-color);
+    border: none;
+    /* border-top: 5px var(--red-color); */
+    padding: 10px 20px;
+    padding-right: 25px;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0% 100%);
     transition: 0.3s;
 }
 
-.settings div {
-    text-align: center;
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 23px;
-    color: #ffffff;
+button:hover
+{
+    color: var(--red-dark-color);
+    background-color: var(--red-main-color);
+}
+
+div {
+    font-size: 42px;
+    padding: 10px 0px;
+    margin: 0px 20px;
+}
+
+.welcome
+{
+    width: 19.4ch;
+    overflow: hidden;
+    border-right: 3px solid var(--red-main-color);
+    padding: 0px;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+        typing 2.5s steps(19, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--red-light-color); }
+  }
+
+.inputBlock
+{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+    gap: 30px;
 }
 
-.settings a {
-    text-align: center;
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 23px;
-    color: #ffffff;
-    display: block;
-}
-
-#bingo-size:hover {
-    opacity: 1;
-}
-
-#bingo-size {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 30px;
-    width: 50px;
-    background: #d3d3d3;
-    outline: none;
-    margin: 0;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-}
-
-td {
-    cursor: pointer;
-    background-color: white;
+input[type="text"] {
+    width: calc(100% - 30px);
+    height: 35px;
+    border: 20px solid var(--red-main-color);
+    border-left: 3px solid var(--red-main-color);
+    border-right: 3px solid var(--red-main-color);
+    border-bottom: 15px solid var(--red-main-color);
+    background-color: var(--red-dark-color);
+    /*clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 15px, 100% 15px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+    */
+    clip-path: polygon(0% 17px, calc(0% + 20px) 0%, 45% 0%, calc(45% + 25px) 17px, 100% 17px, 100% calc(100% - 12px), calc(100% - 15px) 100%, 80% 100%, calc(80% - 15px) calc(100% - 12px), 0% calc(100% - 12px));
     padding: 5px;
-    height: 150px;
-    width: 150px;
-    text-overflow: ellipsis;
+    color: var(--red-main-color);
+    font-family: 'BlenderProBook';
+    font-weight: 800;
+    font-size: 35px;
     text-align: center;
 }
 
-td:hover {
-    background-color: lightgray;
+.shutdown 
+{
+    animation: shutdown 0.7s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
 }
 
-td:active {
-    background-color: gray;
+.unshut
+{
+    animation: shutdown 0.7s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards reverse;
 }
 
-.ticked {
-    background-color: rgba(255, 255, 255, 0.2);
+@keyframes shutdown
+{
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    70% {
+        transform: scaleY(0.01) scaleX(1);
+    }
+    100% {
+        transform: scaleY(0) scaleX(0);
+        opacity: 0;
+    }
+}
+
+.story
+{
+    position: relative;
+    margin: 20%;
+    padding: 25px;
+    background-color: #ff154c3d;
+    /*border: 3px solid var(--red-light-color);*/
+    clip-path: polygon(0% 25px, calc(0% + 25px) 0%, 100% 0%, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0% 100%);
+}
+
+.story:after
+{
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--red-light-color) !important;
+  box-shadow: 0px 0px 10px 4px var(--red-light-color);
+  animation: 
+    scannedh 4s infinite linear normal,
+    delayAnim 8s linear infinite;
+}
+
+@keyframes scannedh
+{
+    0% 
+    {
+      top: 0%;
+    }
+    50%
+    {}
+    51%
+    {}
+    100%
+    {
+        top: 100%;
+    }
+}
+
+@keyframes delayAnim
+{
+    0%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    50.01%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
 }

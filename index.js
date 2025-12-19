@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var quotes = [
     "Point Gratuit Félicitation !",
     "Christophe arrive en retard",
@@ -31,77 +32,51 @@ grid_state = [false, false, false, false, false, false, false, false, false, fal
 
 
 function changedBingo(element)
+=======
+function loadPage()
+>>>>>>> 8660e6f (idk man)
 {
-    let val = parseInt(element.value);
-    if (val > 5)
-        return;
-    bingoSize = val;
-    generateBingo();
-}
-
-
-function shuffle(array) {
-    let currentIndex = array.length;
-  
-    while (currentIndex != 0) {
-      let randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex], array[currentIndex]];
-    }
-  }
-
-
-function generateBingo()
-{
-    shuffle(quotes);
-    let grid = document.getElementById("bingo-grid");
-    resetGrid();
-    let row = "";
-    let table = "";
-    for (let i = 0; i < bingoSize; i++)
+    if (!localStorage.getItem("playerName"))
     {
-        table += "<tr>\n";
-        row = "";
-        for (let j = 0; j < bingoSize; j++)
-        {
-            row += "<td id=\"" + parseInt((parseInt(i) * bingoSize) + parseInt(j)) +"\" onclick=\"tileClicked(this);\">";
-            row += quotes[i * bingoSize + j];
-            row += "</td>";
-        }
-        table += row;
-        table += "\n</tr>";
+        initGame();
     }
-    grid.innerHTML = table;
-}
-
-function resetGrid()
-{
-    for (let i = 0; i < grid_state.length; i++)
-        grid_state[i] = false;
-    document.getElementById("cases").innerHTML = "cases cochées: 0/" + parseInt(bingoSize * bingoSize);
-}
-
-function countTicked(state)
-{
-    let count = 0;
-    for (let i = 0; i < state.length; i++)
-    {
-        if (state[i])
-            count++;
-    }
-    return count;
-}
-
-function tileClicked(element)
-{
-    let state = grid_state[parseInt(element.id)];
-    if (state)
-        element.classList.remove("ticked");
     else
-        element.classList.add("ticked");
-    grid_state[parseInt(element.id)] = !state;
+    {
+        loadGame();
+    }
+}
 
+<<<<<<< HEAD
     let tickedCases = document.getElementById("cases");
     tickedCases.innerHTML = "cases cochées: " + countTicked(grid_state) + "/" + parseInt(bingoSize * bingoSize);
 }
+=======
+function initGame()
+{
+    window.location = "welcomePage.html";
+}
+
+function loadGame()
+{
+    console.log("loading")
+    pages = [
+        "story/pages/storyIntro.html"
+    ];
+    let lvl = parseInt(localStorage.getItem("playerLvl"));
+    window.location = pages[lvl];
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function validateName()
+{
+    let name = document.getElementById("nameInput").value;
+    localStorage.setItem("playerName", name);
+    localStorage.setItem("playerLvl", 0);
+    document.body.classList.toggle('shutdown');
+    await sleep(1000);
+    window.location = "story/pages/storyIntro.html";
+}
+>>>>>>> 8660e6f (idk man)
