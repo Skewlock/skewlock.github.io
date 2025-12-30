@@ -21,7 +21,7 @@
 html
 {
     background-color: #000000;
-    font-size: 42px;
+    font-size: 0.8cm;
     color: var(--red-light-color);
     font-family: 'BlenderProBook';
     width: 100%;
@@ -71,14 +71,14 @@ div {
 
 .welcome
 {
-    width: 19.4ch;
+    width: 30ch;
     overflow: hidden;
     border-right: 3px solid var(--red-main-color);
     padding: 0px;
     white-space: nowrap;
     margin: 0 auto;
     animation:
-        typing 2.5s steps(19, end), blink-caret .75s step-end infinite;
+        typing 2.5s steps(30, end), blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
@@ -92,7 +92,7 @@ div {
     50% { border-color: var(--red-light-color); }
   }
 
-.inputBlock
+.inputBlock2
 {
     display: flex;
     flex-direction: column;
@@ -102,7 +102,7 @@ div {
 }
 
 input[type="text"] {
-    width: calc(100% - 30px);
+    width: 30ch;
     height: 35px;
     border: 20px solid var(--red-main-color);
     border-left: 3px solid var(--red-main-color);
@@ -203,4 +203,12 @@ input[type="text"] {
     {
         opacity: 0;
     }
+}
+
+/*
+THIS IS VERY IMPORTANT
+*/
+.invisible
+{
+    display: none;
 }

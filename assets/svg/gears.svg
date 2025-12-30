@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+<!-- ============================= -->
+<!--            Gear 1             -->
+<!-- ============================= -->
+    <symbol id="gear-1" viewBox="0 0 100 100">
+        <!-- Cercle de base -->
+        <circle cx="50" cy="50" r="37" fill="none" stroke="currentcolor" stroke-width="10"/>
+
+        <!-- Dents cardinales -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor"/>
+
+        <!-- Dents 30 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(30, 50, 50)"/>
+
+        <!-- Dents 60 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(60, 50, 50)"/>
+    </symbol>
+
+<!-- ============================= -->
+<!--            Gear 2             -->
+<!-- ============================= -->
+    <symbol id="gear-2" viewBox="0 0 100 100">
+        <!-- Cercle de base -->
+        <circle cx="50" cy="50" r="37" fill="none" stroke="currentcolor" stroke-width="10"/>
+
+        <!-- Dents cardinales -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor"/>
+
+        <!-- Dents 30 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(30, 50, 50)"/>
+
+        <!-- Dents 60 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(60, 50, 50)"/>
+
+        <!-- Cercle intérieur -->
+        <circle cx="50" cy="50" r="15" fill="none" stroke="currentcolor" stroke-width="10"/>
+
+        <!-- Axes intérieurs -->
+        <path d="M45,15 L55,15 L55,40 L45,40 Z
+        M45,85 L55,85 L55,60 L45,60 Z" fill="currentcolor"/>
+        <path d="M45,15 L55,15 L55,40 L45,40 Z
+        M45,85 L55,85 L55,60 L45,60 Z" fill="currentcolor" transform="rotate(60, 50, 50)"/>
+        <path d="M45,15 L55,15 L55,40 L45,40 Z
+        M45,85 L55,85 L55,60 L45,60 Z" fill="currentcolor" transform="rotate(120, 50, 50)"/>
+    </symbol>
+
+<!-- ============================= -->
+<!--            Gear 3             -->
+<!-- ============================= -->
+    <symbol id="gear-3" viewBox="0 0 100 100">
+        <mask id="g3centerHoles">
+            <rect x="0" y="0" width="100" height="100" fill="white" />
+            <circle cx="50" cy="50" r="10" fill="black"/>
+            <circle cx="50" cy="35" r="2" fill="black"/>
+            <circle cx="50" cy="65" r="2" fill="black"/>
+            <circle cx="35" cy="50" r="2" fill="black"/>
+            <circle cx="65" cy="50" r="2" fill="black"/>
+        </mask>
+        <!-- Cercle de base -->
+        <circle cx="50" cy="50" r="37" fill="none" stroke="currentcolor" stroke-width="10"/>
+
+        <!-- Dents cardinales -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor"/>
+
+        <!-- Dents 30 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(30, 50, 50)"/>
+
+        <!-- Dents 60 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(60, 50, 50)"/>
+
+        <path d="M45,15 L55,15 L55,40 L45,40 Z" fill="currentcolor" mask="url(#g3centerHoles)"/>
+        <path d="M45,15 L55,15 L55,40 L45,40 Z" fill="currentcolor" transform="rotate(120, 50, 50)" mask="url(#g3centerHoles)"/>
+        <path d="M45,15 L55,15 L55,40 L45,40 Z" fill="currentcolor" transform="rotate(240, 50, 50)" mask="url(#g3centerHoles)"/>
+
+        <!-- Cercle intérieur -->
+        <circle cx="50" cy="50" r="20" fill="currentcolor" mask="url(#g3centerHoles)"/>
+    </symbol>
+
+<!-- ============================= -->
+<!--            Gear 4             -->
+<!-- ============================= -->
+    <symbol id="gear-4" viewBox="0 0 100 100">
+        <mask id="g4centerHoles">
+            <rect x="0" y="0" width="100" height="100" fill="white" />
+            <circle cx="50" cy="50" r="10" fill="black"/>
+            <circle cx="25" cy="50" r="6" fill="black"/>
+            <circle cx="75" cy="50" r="6" fill="black"/>
+            <circle cx="25" cy="50" r="6" fill="black" transform="rotate(60, 50, 50)"/>
+            <circle cx="75" cy="50" r="6" fill="black" transform="rotate(60, 50, 50)"/>
+            <circle cx="25" cy="50" r="6" fill="black" transform="rotate(120, 50, 50)"/>
+            <circle cx="75" cy="50" r="6" fill="black" transform="rotate(120, 50, 50)"/>
+        </mask>
+        <!-- Cercle de base -->
+        <circle cx="50" cy="50" r="41" fill="currentcolor" mask="url(#g4centerHoles)"/>
+
+        <!-- Dents cardinales -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor"/>
+
+        <!-- Dents 30 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(30, 50, 50)"/>
+
+        <!-- Dents 60 deg -->
+        <path d="M43,10 L46,0 L54,0 L57,10
+        M90,43 L100,46 L100,54 L90,57
+        M57,90 L54,100 L46,100 L43,90
+        M10,57 L0,54 L0,46 L10,43 Z" fill="currentcolor" transform="rotate(60, 50, 50)"/>
+    </symbol>
+</svg>

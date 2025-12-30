@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link id="style" rel="stylesheet" href="base.css">
     <title>?????</title>
     <script type="text/javascript" src="index.js"></script>
 </head>
@@ -10,12 +10,44 @@
     <div class="front">
         <div class="wrapper">
             <div class="welcome" id="welcomeMsg">
-                Bienvenue à vous, agent.
+                Bienvenue à vous, Agent.
+                Alors dites moi, vous êtes plutôt du genre à l'ancienne ou futuristique.
             </div>
         </div>
-        <div class="inputBlock">
-            <label for="name">Identifiez vous par votre nom</label>
-            <input type="text" name="name" maxlength="30" size="30" placeholder="Votre nom ici" id="nameInput">
+        <div class="inputBlock1">
+
+            <button class="steampunk" onclick="steampunkClicked()">
+                <svg class="top-left-gear1 rotateCw" viewBox="0 0 100 100">
+                    <use href="assets/svg/gears.svg#gear-2"></use>
+                </svg>
+                <svg class="top-left-gear2 rotateCcw" viewBox="0 0 100 100">
+                    <use href="assets/svg/gears.svg#gear-1"></use>
+                </svg>
+                <svg class="top-left-gear3 rotateCcw" viewBox="0 0 100 100">
+                    <use href="assets/svg/gears.svg#gear-3"></use>
+                </svg>
+                <svg class="bottom-right-gear1 rotateCw" viewBox="0 0 100 100">
+                    <use href="assets/svg/gears.svg#gear-4"></use>
+                </svg>
+                <svg class="bottom-right-gear2 rotateCcw" viewBox="0 0 100 100">
+                    <use href="assets/svg/gears.svg#gear-2"></use>
+                </svg>
+                <svg class="bottom-right-gear3 rotateCcw" viewBox="0 0 100 100">
+                    <use href="assets/svg/gears.svg#gear-3"></use>
+                </svg>
+                A l'ancienne
+            </button>
+
+            <button class="cyberpunk glitch" onclick="cyberpunkClicked()">
+                Futuristique
+                <div class="glitch-background">
+                    Futuristique
+                </div>
+            </button>
+        </div>
+        <div class="inputBlock2 invisible">
+            <label for="name"></label>
+            <input type="text" name="name" maxlength="30" size="30" placeholder="Tapez votre nom ici" id="nameInput">
             <button onclick="validateName()">Valider</button>
         </div>
     </div>

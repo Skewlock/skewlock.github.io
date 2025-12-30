@@ -1,0 +1,491 @@
+:root
+{
+    --white-color: #ffffffff;
+    --black-color: #000000ff;
+    --red-main-color: #ff003c9f;
+    --red-dark-color: #270d15;
+    --red-darker-color: #1a080e;
+    --red-light-color: #ff154bd7;
+    --dark-brown-color: rgb(44, 26, 14);
+    --dark-brown-hover-color: rgb(60, 35, 19);
+    --brown-color: #6b4131ff;
+    --brown-light-color: #856045ff;
+    --gold-color: #a7793eff;
+    --light-gold-color: #e1c289ff;
+    --metal-brown-color: #887972ff;
+
+    /*
+        glitch animation
+    */
+    --shimmy-distance: 6;
+    --clip-one: polygon(
+      0% 2%,
+      100% 2%,
+      100% 25%,
+      95% 25%,
+      95% 20%,
+      85% 20%,
+      85% 25%,
+      8% 25%,
+      0% 20%
+    );
+    --clip-two: polygon(
+      0 78%,
+      100% 78%,
+      100% 100%,
+      95% 100%,
+      95% 90%,
+      85% 90%,
+      85% 100%,
+      8% 100%,
+      0 78%
+    );
+    --clip-three: polygon(
+      0 44%,
+      100% 44%,
+      100% 54%,
+      95% 54%,
+      95% 54%,
+      85% 54%,
+      85% 54%,
+      8% 54%,
+      0 54%
+    );
+    --clip-four: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      95% 0,
+      95% 0,
+      85% 0,
+      85% 0,
+      8% 0,
+      0 0
+    );
+    --clip-five: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      95% 0,
+      95% 0,
+      85% 0,
+      85% 0,
+      8% 0,
+      0 0
+    );
+    --clip-six: polygon(
+      0 20%,
+      100% 20%,
+      100% 45%,
+      95% 45%,
+      95% 45%,
+      85% 45%,
+      85% 45%,
+      8% 45%,
+      0 30%
+    );
+    --clip-seven: polygon(
+      0 63%,
+      100% 63%,
+      100% 80%,
+      95% 80%,
+      95% 80%,
+      85% 80%,
+      85% 80%,
+      8% 80%,
+      0 70%
+    );
+}
+
+@font-face
+{
+    font-family: 'Steamwreck';
+    src: url('/assets/fonts/Steamwreck-07pd.ttf');
+    font-weight: normal;
+}
+@font-face
+{
+    font-family: 'Steamwreck';
+    src: url('/assets/fonts/SteamwreckBold-e3Xp.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'GreatVictorian';
+    src: url('/assets/fonts/great-victorian.standard.otf');
+}
+
+@font-face
+{
+    font-family: 'BlenderProBook';
+    src: url('/assets/fonts/blender-pro-book.woff');
+}
+
+html
+{
+    background: #1d1d1d;
+    background-image: radial-gradient(#656565 1px, transparent 1px);
+    background-size: 16px 16px;
+    font-size: 0.8cm;
+    color: var(--white-color);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    background-image: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    /* radial-gradient(circle,rgba(0, 0, 0, 1) 15%, rgba(255, 255, 255, 0) 100%); */
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+}
+
+.wrapper
+{
+    margin-bottom: 30px;
+}
+
+.inputBlock1
+{
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+}
+
+/**********************************
+        Boutons steampunk
+**********************************/
+button.steampunk
+{
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    font-family: 'GreatVictorian', 'Courier New';
+    font-weight: bold;
+    font-size: 45px;
+    background-color: var(--dark-brown-color);
+    color: var(--gold-color);
+    border: 2px solid var(--gold-color);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.steampunk::before
+{
+    top: 10px;
+    left: 10px;
+    display: block;
+    content: "";
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    background-color: #ffffff00;
+    position: absolute;
+    border: 2px solid var(--gold-color);
+    clip-path: polygon(50% 0%, 100% 0%, 100% calc(0% + 50px), calc(100% - 50px) calc(0% + 50px), 50% 100%, 0% 100%, 0% calc(100% - 50px));
+}
+
+.top-left-gear1
+{
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    height: 200px;
+    width: 200px;
+}
+
+.top-left-gear2
+{
+    position: absolute;
+    top: -30px;
+    left: 120px;
+    height: 100px;
+    width: 100px;
+    rotate: 15deg;
+}
+
+.top-left-gear3
+{
+    position: absolute;
+    top: 115px;
+    left: -35px;
+    height: 75px;
+    width: 75px;
+    rotate: 5deg;
+}
+
+.bottom-right-gear1
+{
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    height: 150px;
+    width: 150px;
+    rotate: -15deg;
+}
+
+.bottom-right-gear2
+{
+    position: absolute;
+    bottom: -20px;
+    right: 100px;
+    height: 80px;
+    width: 80px;
+    rotate: 0deg;
+}
+
+.bottom-right-gear3
+{
+    position: absolute;
+    bottom: 100px;
+    right: -10px;
+    height: 70px;
+    width: 70px;
+    rotate: 30deg;
+}
+
+button.steampunk:hover
+{
+    background-color: var(--dark-brown-hover-color);
+}
+
+@keyframes rotatingCw
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotatingCcw
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+svg.rotateCw {
+    animation: rotatingCw 3s linear infinite paused;
+    transition: transform 4s ease-out;
+}
+
+svg.rotateCcw {
+    animation: rotatingCcw 3s linear infinite paused;
+    transition: transform 4s ease-out;
+}
+
+button.steampunk:hover svg.rotateCw
+{
+    animation-play-state: running;
+    transform: rotate(.2turn);
+}
+
+button.steampunk:hover svg.rotateCcw
+{
+    animation-play-state: running;
+    transform: rotate(-.2turn);
+}
+
+/**********************************
+        Boutons cyberpunk
+**********************************/
+button.cyberpunk {
+    position: relative;
+    overflow: visible;
+    width: 50%;
+    font-family: 'BlenderProBook';
+    font-size: 35px;
+    color: var(--red-light-color);
+    background-color: var(--red-dark-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0% 100%);
+    transition: 0.3s;
+}
+
+button.cyberpunk:hover
+{
+    color: var(--red-dark-color);
+    background-color: var(--red-main-color);
+}
+
+button.cyberpunk:hover::after
+{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--red-light-color) !important;
+  box-shadow: 0px 0px 10px 4px var(--red-light-color);
+  animation: 
+    scannedh 4s infinite linear;
+}
+
+button.cyberpunk .glitch-background
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: 'BlenderProBook';
+    font-size: 35px;
+    color:#000000;  
+    width: 100%;
+    height: 100%;
+    background-color: var(--red-main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: clipping-glitch 3s step-end infinite;
+}
+
+.shutdown 
+{
+    animation: shutdown 0.7s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards;
+}
+
+.unshut
+{
+    animation: shutdown 0.7s cubic-bezier(0.755, 0.05, 0.855, 0.06) forwards reverse;
+}
+
+@keyframes shutdown
+{
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+    70% {
+        transform: scaleY(0.01) scaleX(1);
+    }
+    100% {
+        transform: scaleY(0) scaleX(0);
+        opacity: 0;
+    }
+}
+
+@keyframes clipping-glitch
+{
+    0%
+    {
+      clip-path: var(--clip-one);
+    }
+    2%,
+    8%
+    {
+      clip-path: var(--clip-two);
+      transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+    }
+    6%
+    {
+      clip-path: var(--clip-two);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    9%
+    {
+      clip-path: var(--clip-two);
+      transform: translate(0, 0);
+    }
+    10%
+    {
+      clip-path: var(--clip-three);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    13%
+    {
+      clip-path: var(--clip-three);
+      transform: translate(0, 0);
+    }
+    14%,
+    21%
+    {
+      clip-path: var(--clip-four);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    25%
+    {
+      clip-path: var(--clip-five);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    30%
+    {
+      clip-path: var(--clip-five);
+      transform: translate(calc(var(--shimmy-distance) * -1%), 0);
+    }
+    35%,
+    45%
+    {
+      clip-path: var(--clip-six);
+      transform: translate(calc(var(--shimmy-distance) * -1%));
+    }
+    40%
+    {
+      clip-path: var(--clip-six);
+      transform: translate(calc(var(--shimmy-distance) * 1%));
+    }
+    50%
+    {
+      clip-path: var(--clip-six);
+      transform: translate(0, 0);
+    }
+    55%
+    {
+      clip-path: var(--clip-seven);
+      transform: translate(calc(var(--shimmy-distance) * 1%), 0);
+    }
+    60%
+    {
+      clip-path: var(--clip-seven);
+      transform: translate(0, 0);
+    }
+    31%,
+    61%,
+    100%
+    {
+      clip-path: var(--clip-four);
+    }
+}
+
+@keyframes scannedh
+{
+    0% 
+    {
+      top: 0%;
+    }
+    50%
+    {}
+    51%
+    {}
+    100%
+    {
+        top: 100%;
+    }
+}
+
+/*
+THIS IS VERY IMPORTANT
+*/
+.invisible
+{
+    display: none;
+}
